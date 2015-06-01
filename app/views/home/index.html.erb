@@ -24,8 +24,12 @@
             <li class="divider"></li>
             <li><a href="#">soup</a></li>
           </ul>
-<a class="navbar-brand" href="#">LogIn</a>
-<a class="navbar-brand" href="#">MyPage</a>
+<% if session[:user_id].nil? %>
+<a class="navbar-brand" href="/users/login">LogIn</a>
+<a class="navbar-brand" href="/users/signup">JoinUs</a>
+<% else %>
+<a class="navbar-brand" href="/users/logout_complete">LogOut</a>
+<% end %>
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="dropdown">
@@ -64,6 +68,7 @@
     </ul>
   </div>
 </nav>
+<%= yield %>
 <div class="container">
   <!-- introduction -->
   <div class="jumbotron">

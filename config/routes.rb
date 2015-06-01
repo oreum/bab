@@ -1,4 +1,15 @@
-Rails.application.routes.draw do
+#Rails.application.routes.draw do
+Bab::Application.routes.draw do
+  get 'users/signup'
+
+  post 'users/signup_complete'
+
+  get 'users/login'
+
+  post 'users/login_complete'
+
+  get 'users/logout_complete'
+
   #resources :article
 
   # The priority is based upon order of creation: first created -> highest priority.
