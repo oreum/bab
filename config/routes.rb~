@@ -1,5 +1,6 @@
 #Rails.application.routes.draw do
 
+  get 'users/find_id'
 
 Bab::Application.routes.draw do
 
