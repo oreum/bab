@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531170120) do
+ActiveRecord::Schema.define(version: 20150601160113) do
+
+  create_table "qnas", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "category"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password"
+    t.string   "email"
+    t.string   "phonenumber"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

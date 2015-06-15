@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   def signup_complete
     user = User.new
     user.username = params[:username]
+    user.email = params[:email]
+    user.phonenumber = params[:phonenumber]
     if params[:password] == params[:retype_password]
       user.password = params[:password]
       if user.save
@@ -18,7 +20,6 @@ class UsersController < ApplicationController
       flash[:alert] = "비밀번호가 맞지 않습니다."
       redirect_to :back
     end
-
   end
 
   def login
