@@ -1,0 +1,21 @@
+<p>
+  <strong>Title:</strong>
+  <%= @product.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Image URL:</strong>
+  <%= @product.image_url %>
+</p>
+<%= link_to '수정', edit_product_path(@product) %>
+<%= link_to '목록', products_path %>

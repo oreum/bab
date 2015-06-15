@@ -30,6 +30,16 @@ Bab::Application.routes.draw do
 
   get 'users/logout_complete'
 
+  get 'shop/index'
+
+  resources :products
+  resources :items do
+    member do
+	  put 'decrement'
+	  put 'increment'
+	end
+  end
+  resources :carts
   #resources :article
 
   # The priority is based upon order of creation: first created -> highest priority.
