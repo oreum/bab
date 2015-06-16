@@ -1,6 +1,6 @@
 .container {
-  margin-top: 50px;
-  padding-left: 100px;
+  margin-top: 30px;
+  padding-left: 30px;
   padding-right: 100px;
 }
 
@@ -14,6 +14,15 @@
 
 .jumbotron > p {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: 15px;
+}
+
+#profile-description {
+  text-align: center;
+}
+
+#profile-photo {
+  width: 20%;
+  text-align:left;
 }
 

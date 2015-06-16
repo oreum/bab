@@ -3,7 +3,38 @@ class UsersController < ApplicationController
   end
 
   def find_pw
-  
+  user_email=params[:email]
+  user=User.find_by(email:params[:email])
+  require 'gmail'
+  gmail = Gmail.connect('oreumoreum@gmail.com','01300130')
+  puts gmail.logged_in?
+  gmail.deliver do
+    to user_email
+    subject "<THE BAB> 잃어버린 비밀번호입니다."
+    text_part do
+    if user.nil?
+      body "E-mail을 잘못 적었습니다. 다시 적어 주세요."
+    else
+      body user.username+"계정의 비밀번호는 "+user.password+"입니다."
+    end
+   end
+  end
+end
+
+
+  def find_id
+  user_email=params[:email]
+  user=User.find_by(email:params[:email])
+  if user.nil?
+    flash[:alert] = "비밀번호가 맞지 않습니다."
+    redirect_to :back
+  else
+    flash[:alert] = "아이디는 "+user.username+"입니다."
+    redirect_to :back
+    end
+  end
+
+  def find
   end
 
   def signup_complete
@@ -37,6 +68,14 @@ class UsersController < ApplicationController
     elsif user.password != params[:password]
       flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
       redirect_to :back
+    elsif params[:username] == 'manager'
+      if user.password != params[:password]
+      flash[:alert] = "아이디 또는 비밀번호를 잘못 입력하셨습니다."
+      redirect_to :back
+      else
+      session[:user_id] = user.id
+      redirect_to "/manager/man"
+      end
     else
       session[:user_id] = user.id
      #flash[:alert] = "성공적으로 로그인하였습니다."

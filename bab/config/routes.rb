@@ -1,4 +1,47 @@
-Rails.application.routes.draw do
+#Rails.application.routes.draw do
+
+Bab::Application.routes.draw do
+
+  get 'about/us'
+
+  get 'qna/posts'
+
+  get 'qna/posts_category'
+
+  get 'qna/show'
+
+  get 'qna/write'
+
+  get 'qna/write_complete'
+
+  get 'qna/edit'
+
+  get 'qna/edit_complete'
+
+  get 'qna/delete_complete'
+
+  get 'users/signup'
+
+  post 'users/signup_complete'
+
+  get 'users/login'
+
+  post 'users/login_complete'
+
+  get 'users/logout_complete'
+
+  get 'shop/index'
+  resources :users 
+    resources :orders
+  
+  resources :products
+  resources :items do
+    member do
+	  put 'decrement'
+	  put 'increment'
+	end
+  end
+  resources :carts
   #resources :article
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,4 +1,4 @@
 <%= render 'form' %>
 <br>
 <br>
-<h1>ID & PASSWD 찾기</h1>
+<h2>    ID & PASSWD 찾기</h2>

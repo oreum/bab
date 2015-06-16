@@ -1,3 +1,21 @@
+<html>
+<body>
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+
+
+<div class="sub_title01">
+		<div class="float_left"><img src="img/star.gif"></div>
+		<div class="copy01">더밥의 베스트, 국민도시락</div>
+	</div>
+
+
+
+
 <h1>맛있는 도시락, "밥"<h1>
 
 <table border="1">
@@ -20,3 +38,5 @@
   <% end %>
 
 </table>
+</body>
+</html>

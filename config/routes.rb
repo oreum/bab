@@ -3,11 +3,13 @@
 
 Bab::Application.routes.draw do
 
-  get 'users/find_id'
+  get 'manager/man'
+
+  post 'users/find_id'
 
   get 'users/find'
 
-  get 'users/find_pw'
+  post 'users/find_pw'
 
   get 'about/us'
 
@@ -38,6 +40,18 @@ Bab::Application.routes.draw do
   get 'users/logout_complete'
 
   get 'shop/index'
+
+  get 'mypage/shows'
+  
+  get 'delivery/posts'
+
+  get 'delivery/write'
+
+  get 'delivery/write_complete'
+
+  get 'delivery/edit'
+
+  get 'delivery/edit_complete'
 
   resources :products
   resources :items do

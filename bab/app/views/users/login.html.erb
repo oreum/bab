@@ -1,0 +1,25 @@
+<%= render 'form' %>
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-1 text-center">
+      <h3 class="form-heading">LOGIN</h3>
+
+      <form action="/users/login_complete" method="post">
+        <p><input class="form-input" type="text" name="username" placeholder="아이디"></p>
+        <p><input class="form-input" type="password" name="password" placeholder="비밀번호"></p>
+        <input class="btn btn-default" type="submit" value="로그인">
+      </form>
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+

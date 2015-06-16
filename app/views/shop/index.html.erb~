@@ -1,0 +1,42 @@
+<html>
+<body>
+<div class="container">
+  <% if !flash[:alert].nil? %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+
+<%= yield %>
+<div class="sub_title01">
+		<div class="float_left"><img src="img/star.gif"></div>
+		<div class="copy01">더밥의 베스트, 국민도시락</div>
+	</div>
+
+
+
+
+<h1>맛있는 도시락, "밥"<h1>
+
+<table border="1">
+  <tr>
+    <th></th>
+    <th>상품명</th>
+	<th>상세 내용</th>
+	<th>가격</th>
+	<th colspan="3">비고</th>
+  </tr>
+
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= image_tag(product.image_url) %></td>
+  	  <td><%= product.title %></td>
+	  <td><%= product.description %></td>
+	  <td><%= product.price %></td>
+	  <td><%= button_to '담기', items_path(product_id:product) %></td>
+    </tr>
+  <% end %>
+
+</table>
+</body>
+</html>

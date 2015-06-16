@@ -1,0 +1,28 @@
+<table border="1">
+  <tr>
+	<th>상품명</th>
+	<th>가격</th>
+	<th>수량</th>
+	<th>합계</th>
+  </tr>
+
+  <% @cart.items.each do |item| %>
+    <tr>
+	  <td><%= item.product.title %></td>
+	  <td><%= item.product.price %></td>
+	  <td><%= button_to '<', decrement_item_path(item), method: :put %><%= item.quantity %><%= button_to '>', increment_item_path(item), method: :put %></td>
+	  <td><%= item.total_price %></td>
+	  <td><%= button_to '삭제', item, method: :delete,
+	  							data: {confirm:  '상품을 삭제하시겠습니까?'} %></td>
+	</tr>
+  <% end %>
+
+  <tr>
+    <td colspan="3">Total</td>
+	<td><%= @cart.total_price %></td>
+  </tr>
+</table>
+
+<%= button_to '장바구니 비우기', @cart, method: :delete,
+  				confirm: '장바구니를 비우시겠습니까?' %>
+<%= button_to '결제하기', new_order_path, method: :get %>
