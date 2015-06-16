@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+require 'gmail'
   def signup
   end
 
@@ -74,7 +75,11 @@ end
       redirect_to :back
       else
       session[:user_id] = user.id
+<<<<<<< HEAD
       redirect_to "/home/manager"
+=======
+      redirect_to "/manager/man"
+>>>>>>> 55a9fb003863cdc6084813f09606d9d7dc823492
       end
     else
       session[:user_id] = user.id

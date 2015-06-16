@@ -1,6 +1,5 @@
 #Rails.application.routes.draw do
 
-
 Bab::Application.routes.draw do
 
   get 'manager/man'
@@ -41,6 +40,7 @@ Bab::Application.routes.draw do
 
   get 'shop/index'
 
+
   get 'mypage/shows'
   
   get 'delivery/posts'
@@ -52,6 +52,11 @@ Bab::Application.routes.draw do
   get 'delivery/edit'
 
   get 'delivery/edit_complete'
+
+
+  resources :users 
+    resources :orders
+  
 
   resources :products
   resources :items do

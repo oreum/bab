@@ -25,3 +25,4 @@
 
 <%= button_to '장바구니 비우기', @cart, method: :delete,
   				confirm: '장바구니를 비우시겠습니까?' %>
+<%= button_to '결제하기', new_order_path, method: :get %>
