@@ -13,16 +13,16 @@
   <div clas="navbar-header">
     <a class="navbar-brand" href="/">THE BOB</a>
     <a class="navbar-brand" href="/about/us">About Us</a>
-<a class="navbar-brand" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">SHOPPING <span class="caret"></span></a>
+<a class="navbar-brand" class="dropdown-toggle" href="/shop/index" data-toggle="dropdown" role="button" aria-expanded="false">SHOPPING <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">banchan1</a></li>
-            <li><a href="#">BANCHAN2</a></li>
-            <li><a href="#">banchan3</a></li>
+            <li><a href="/shop/index">banchan1</a></li>
+            <li><a href="/shop/index">BANCHAN2</a></li>
+            <li><a href="/shop/index">banchan3</a></li>
             <li class="divider"></li>
-            <li><a href="#">bab1</a></li>
-            <li><a href="#">bab1</a></li>
+            <li><a href="/shop/index">bab1</a></li>
+            <li><a href="/shop/index">bab1</a></li>
             <li class="divider"></li>
-            <li><a href="#">soup</a></li>
+            <li><a href="/shop/index">soup</a></li>
           </ul>
 <% if session[:user_id].nil? %>
 <a class="navbar-brand" href="/users/login">LogIn</a>
@@ -30,7 +30,7 @@
 <a class="navbar-brand" href="/qna/posts">FAQ</a>
 <% else %>
 <a class="navbar-brand" href="/qna/posts">FAQ</a>
-<a class="navbar-brand" href="#">MyPage</a>
+<a class="navbar-brand" href="/mypage/shows">MyPage</a>
 <a class="navbar-brand" href="/users/logout_complete">LogOut</a>
 <% end %>
 

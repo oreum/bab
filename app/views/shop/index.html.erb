@@ -1,5 +1,6 @@
 <html>
 <body>
+
 <div class="container">
   <% if !flash[:alert].nil? %>
   <div class="alert alert-danger">
@@ -9,33 +10,45 @@
 
 
 <div class="sub_title01">
-		<div class="float_left"><img src="http://i59.tinypic.com/5o7228.gif"><h1>더밥의 베스트, 국민도시락<h1></div>
+	<div class="float_left"><img src="http://i59.tinypic.com/5o7228.gif" align="left">
+		<div class="copy01"><h1>더밥의 베스트, 국민도시락<h1></div>
 	</div>
+		
+</div>
 
 
+<div class="HT20_empty_space">&nbsp;</div>
+<div class="HT20_empty_space">&nbsp;</div>
+<div class="HT20_empty_space">&nbsp;</div>
 
 
-<h1>맛있는 도시락, "밥"<h1>
-
-<table border="1">
+<table border="0">
   <tr>
-    <th></th>
-    <th>상품명</th>
-	<th>상세 내용</th>
-	<th>가격</th>
-	<th colspan="3">비고</th>
+    <th style="text-align:center;color:red;font-size:19px;height:80px">상품</th>
+    <th style="text-align:center;color:red;font-size:19px">상품명</th>
+	<th style="text-align:center;color:red;font-size:19px">상세 내용</th>
+	<th style="text-align:center;color:red;font-size:19px">가격</th>
+	<th style="text-align:center;color:red;font-size:19px">장바구니</th>
   </tr>
 
   <% @products.each do |product| %>
     <tr>
-      <td><%= image_tag(product.image_url) %></td>
-  	  <td><%= product.title %></td>
-	  <td><%= product.description %></td>
-	  <td><%= product.price %></td>
-	  <td><%= button_to '담기', items_path(product_id:product) %></td>
+      <td align="center"><%= image_tag(product.image_url) %></td>
+  	  <td align="center"><%= product.title %></td>
+	  <td align="left"><%= product.description %></td>
+	  <td align="center"><%= product.price %></td>
+	  <td align="center"><%= button_to '담기', items_path(product_id:product) %></td>
     </tr>
   <% end %>
 
 </table>
+
+<div class="HT40_empty_space">&nbsp;</div>
+
+<div id="footer_img">
+	<img src="http://i58.tinypic.com/289ldv5.gif">
+</div>
+
+
 </body>
 </html>

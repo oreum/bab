@@ -4,7 +4,7 @@
     <a class="navbar-brand" href="/about/us">About Us</a>
 <a class="navbar-brand" class="dropdown-toggle" href="/products/index" data-toggle="dropdown" role="button" aria-expanded="false">SHOPPING <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/products/">banchan1</a></li>
+            <li><a href="/products/">dosirak</a></li>
             <li><a href="#">BANCHAN2</a></li>
             <li><a href="#">banchan3</a></li>
             <li class="divider"></li>
@@ -61,8 +61,6 @@
   </div>
 </nav>
 
-
-<%= render 'form' %>
 <br>
 <br>
 <h3>    THE BOB members</h3>
