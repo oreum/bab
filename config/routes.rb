@@ -31,7 +31,9 @@ Bab::Application.routes.draw do
   get 'users/logout_complete'
 
   get 'shop/index'
-
+  resources :users 
+    resources :orders
+  
   resources :products
   resources :items do
     member do
