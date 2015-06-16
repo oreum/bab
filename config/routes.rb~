@@ -10,13 +10,15 @@ Bab::Application.routes.draw do
 
   post 'users/find_pw'
 
+  post 'users/show'
+
   get 'about/us'
 
   get 'qna/posts'
 
   #get 'qna/posts_category'
 
-  get '/:category' => 'qna#posts_category'
+  get 'qna/:category' => 'qna#posts_category'
 
   get 'qna/show/:id' => 'qna#show'
 

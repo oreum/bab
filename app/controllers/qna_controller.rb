@@ -4,15 +4,14 @@ class QnaController < ApplicationController
   end
 
   def posts_category
-   case params[:category]
-    when "korean"
-      @category = "한식"
-    when "japanese"
-      @category = "일식"
-    when "chinese"
-      @category = "중식"
-    else
-      @category = "양식"
+    if params[:category] = "aaa"
+      @category = "상품문의"
+    elsif params[:category] = "bbb"
+      @category = "주문/결제"
+    elsif params[:category] = "ccc"
+      @category = "배송관련"
+    elsif params[:category] = "ddd"
+      @category = "취소/환불"
     end
     @posts = Post.where(category: @category)
   end

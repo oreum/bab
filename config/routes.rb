@@ -18,7 +18,7 @@ Bab::Application.routes.draw do
 
   #get 'qna/posts_category'
 
-  get '/:category' => 'qna#posts_category'
+  #get 'qna/:category' => 'qna#posts_category'
 
   get 'qna/show/:id' => 'qna#show'
 

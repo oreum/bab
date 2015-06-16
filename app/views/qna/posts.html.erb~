@@ -12,7 +12,6 @@
 <% @posts.reverse.each do |post| %>
 <div style="border: 1px solid #ffffff">
   <h4><p style="color: black"><%= post.category %>        ||        <a href="/qna/show/<%= post.id %>"><%= post.title %></a></p></h4>
-  
 </div>
 <% end %>
 

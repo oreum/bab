@@ -5,14 +5,14 @@ class QnaController < ApplicationController
 
   def posts_category
    case params[:category]
-    when "korean"
-      @category = "한식"
-    when "japanese"
-      @category = "일식"
-    when "chinese"
-      @category = "중식"
-    else
-      @category = "양식"
+    when "aaa"
+      @category = "상품문의"
+    when "bbb"
+      @category = "주문/결제"
+    when "ccc"
+      @category = "배송관련"
+    when "ddd"
+      @category = "취소/환불"
     end
     @posts = Post.where(category: @category)
   end
@@ -58,5 +58,9 @@ class QnaController < ApplicationController
   end
 
   def delete_complete
+    post = Post.find(params[:id])
+    post.destroy
+    flash[:alert] = "삭제되었습니다."
+    redirect_to "/qna/posts"
   end
 end
