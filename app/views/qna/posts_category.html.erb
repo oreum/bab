@@ -1,2 +1,17 @@
-<h1>Qna#posts_category</h1>
-<p>Find me in app/views/qna/posts_category.html.erb</p>
+<h4><a href="#">Codelion 맛집 평가</a> || <a href="#">한식</a> | <a href="#">일식</a> | <a href="#">중식</a> | <a href="#">양식</a></h4>
+
+<div>
+  <h2><%= @category %> 리스트입니다.</h2>
+</div>
+
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><%= post.title %></h4>
+  <p style="color: #ff0000"><%= post.category %></p>
+  <p>작성자 아이디</p>
+  <p><%= post.content %></p>
+</div>
+<% end %>
+

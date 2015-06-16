@@ -2,11 +2,15 @@ class UsersController < ApplicationController
   def signup
   end
 
+  def show
+   @users = User.all
+  end
+
   def find_pw
   user_email=params[:email]
   user=User.find_by(email:params[:email])
   require 'gmail'
-  gmail = Gmail.connect('oreumoreum@gmail.com','01300130')
+  gmail = Gmail.connect("oreumoreum@gmail.com","01300130")
   puts gmail.logged_in?
   gmail.deliver do
     to user_email
@@ -15,7 +19,7 @@ class UsersController < ApplicationController
     if user.nil?
       body "E-mail을 잘못 적었습니다. 다시 적어 주세요."
     else
-      body user.username+"계정의 비밀번호는 "+user.password+"입니다."
+      body user.username+" 계정의 비밀번호는 "+user.password+"입니다."
     end
    end
   end
