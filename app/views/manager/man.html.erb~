@@ -1,5 +1,4 @@
 
-<p>Find me in app/views/home/index.html.erb</p>
 <html>
   <head>
     <meta charset="utf-8">
@@ -15,7 +14,7 @@
     <a class="navbar-brand" href="/about/us">About Us</a>
 <a class="navbar-brand" class="dropdown-toggle" href="/products/index" data-toggle="dropdown" role="button" aria-expanded="false">SHOPPING <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/products/index">banchan1</a></li>
+            <li><a href="/products/">banchan1</a></li>
             <li><a href="#">BANCHAN2</a></li>
             <li><a href="#">banchan3</a></li>
             <li class="divider"></li>
@@ -38,7 +37,7 @@
       <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MANAGER <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="/users/show">회원관리</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -55,30 +54,14 @@
       </button>
 
   </div>
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdownoreum <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      
-    </ul>
-  </div>
 </nav>
 <%= yield %>
 <div class="container">
   <!-- introduction -->
   <div class="jumbotron">
-    <img src="food2.jpg">
     <h1 style="font-family: Gill Sans;">Welcome to THE BOB</h1>
+    <img src="https://41.media.tumblr.com/tumblr_m8hxl0Et601r67nsjo1_500.jpg">
   </div>
-
 </div>
   </body>
 </html>

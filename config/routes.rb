@@ -10,23 +10,27 @@ Bab::Application.routes.draw do
 
   post 'users/find_pw'
 
+  post 'users/show'
+
   get 'about/us'
 
   get 'qna/posts'
 
-  get 'qna/posts_category'
+  #get 'qna/posts_category'
 
-  get 'qna/show'
+  get '/:category' => 'qna#posts_category'
+
+  get 'qna/show/:id' => 'qna#show'
 
   get 'qna/write'
 
-  get 'qna/write_complete'
+  post 'qna/write_complete'
 
-  get 'qna/edit'
+  get 'qna/edit/:id' => 'qna#edit'
 
-  get 'qna/edit_complete'
+  post 'qna/edit_complete'
 
-  get 'qna/delete_complete'
+  get 'qna/delete_complete/:id' => 'qna#delete_complete'
 
   get 'users/signup'
 

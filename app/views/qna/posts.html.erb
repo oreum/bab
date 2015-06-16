@@ -1,4 +1,18 @@
 <%= render 'form' %>
-  <p>작성자 아이디</p>
-<h1>This is QNA<h1>
+<%= flash[:alert] %>
+<br>
+<br>
+<br>
+<br>
+
+<h4> <a href="/qna/write">글쓰기</a></h4>
+<h4><a href="/qna/posts">전체</a> || <a href="/korean">상품문의</a> | <a href="/japanese">주문/결제</a> | <a href="/chinese">배송관련</a> | <a href="/western">취소/환불</a></h4>
+<hr>
+
+<% @posts.reverse.each do |post| %>
+<div style="border: 1px solid #ffffff">
+  <h4><p style="color: black"><%= post.category %>        ||        <a href="/qna/show/<%= post.id %>"><%= post.title %></a></p></h4>
+  <hr>
+</div>
+<% end %>
 
