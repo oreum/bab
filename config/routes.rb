@@ -1,13 +1,14 @@
 #Rails.application.routes.draw do
 
-
 Bab::Application.routes.draw do
 
-  get 'users/find_id'
+  get 'manager/man'
+
+  post 'users/find_id'
 
   get 'users/find'
 
-  get 'users/find_pw'
+  post 'users/find_pw'
 
   get 'about/us'
 

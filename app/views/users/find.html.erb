@@ -2,3 +2,14 @@
 <br>
 <br>
 <h2>    ID & PASSWD 찾기</h2>
+
+<p><%=flash[:alert]%></p>
+<form action="/users/find_id" method="post">
+  <p>e-mail: <input type="text" name="email"></p>
+  <input type="submit" value="ID찾기">
+</form>
+<form action="/users/find_pw" method="post">
+  <p>아이디: <input type="text" name="username"></p>
+  <p>e-mail: <input type="text" name="email"></p>
+  <input type="submit" value="PW찾기">
+</form>

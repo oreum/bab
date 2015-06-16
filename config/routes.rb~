@@ -1,14 +1,14 @@
 #Rails.application.routes.draw do
 
-  get 'users/find_id'
-
 Bab::Application.routes.draw do
 
-  get 'users/find_id'
+  get 'manager/man'
+
+  post 'users/find_id'
 
   get 'users/find'
 
-  get 'users/find_pw'
+  post 'users/find_pw'
 
   get 'about/us'
 
@@ -38,6 +38,16 @@ Bab::Application.routes.draw do
 
   get 'users/logout_complete'
 
+  get 'shop/index'
+
+  resources :products
+  resources :items do
+    member do
+	  put 'decrement'
+	  put 'increment'
+	end
+  end
+  resources :carts
   #resources :article
 
   # The priority is based upon order of creation: first created -> highest priority.
