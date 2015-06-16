@@ -1,7 +1,7 @@
 <p><%= flash[:alert] %></p>
 <h2>맛집 추가하기</h2>
 
-<form action="/qnas/write_complete" method="post">
+<form action="/qna/write_complete" method="post">
   <p style="color: #ff0000">분류:
   <select name="post_category">
     <option value="한식">한식</option>

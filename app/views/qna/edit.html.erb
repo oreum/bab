@@ -3,12 +3,12 @@
 
 <form action="/qna/edit_complete" method="post">
   <input type="hidden" name="id" value="<%= @post.id %>">
-  <p style="color: #ff0000">분류:
+  <p style="color: black">분류:
   <select name="post_category">
-    <option value="한식">한식</option>
-    <option value="일식">일식</option>
-    <option value="중식">중식</option>
-    <option value="양식">양식</option>
+    <option value="상품문의">상품문의</option>
+    <option value="주문/결제">주문/결제</option>
+    <option value="배송관련">배송관련</option>
+    <option value="취소/환불">취소/환불</option>
   </select></p>
   <p>제목: <input type="text" name="post_title" value="<%= @post.title %>"></p>
   <p>내용: <textarea name="post_content"><%= @post.content %></textarea></p>

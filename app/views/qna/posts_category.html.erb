@@ -1,5 +1,5 @@
-<h4><a href="#">Codelion 맛집 평가</a> || <a href="#">한식</a> | <a href="#">일식</a> | <a href="#">중식</a> | <a href="#">양식</a></h4>
-
+<h4> <a href="/qna/write">글쓰기</a></h4>
+<h4><a href="/qna/posts">전체</a> || <a href="/aaa">상품문의</a> | <a href="/bbb">주문/결제</a> | <a href="/ccc">배송관련</a> | <a href="/ddd">취소/환불</a></h4>
 <div>
   <h2><%= @category %> 리스트입니다.</h2>
 </div>
@@ -8,9 +8,8 @@
 
 <% @posts.reverse.each do |post| %>
 <div style="border: 1px solid #ffffff">
+  <p style="color: black"><%= post.category %></p>
   <h4><%= post.title %></h4>
-  <p style="color: #ff0000"><%= post.category %></p>
-  <p>작성자 아이디</p>
   <p><%= post.content %></p>
 </div>
 <% end %>
